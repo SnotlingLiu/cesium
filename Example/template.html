@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Use correct character set. -->
+  <meta charset="utf-8" />
+  <!-- Tell IE to use the latest, best version. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Cesium源码调试模板</title>
+  <link rel="stylesheet" href="../Source/Widgets/widgets.css">
+  <style>
+    html,
+    body,
+    #main {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main"></div>
+  <script type="module">
+    import * as  Cesium from '../Source/Cesium.js';
+    window.CESIUM_BASE_URL = '../Source';
+    window.Cesium = Cesium;
+    onload();
+  </script>
+  <script>
+    var viewer;
+    function onload() {
+      viewer = new Cesium.Viewer("main");
+    }
+  </script>
+</body>
+
+</html>
